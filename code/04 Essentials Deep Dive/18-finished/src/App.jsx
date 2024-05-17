@@ -29,7 +29,7 @@ function deriveActivePlayer(gameTurns) {
 
 function deriveGameBoard(gameTurns) {
   let gameBoard = [...INITIAL_GAME_BOARD.map((array) => [...array])];
-
+  console.log("deriveGameBoard")
   for (const turn of gameTurns) {
     const { square, player } = turn;
     const { row, col } = square;
@@ -90,6 +90,7 @@ function App() {
   }
 
   function handlePlayerNameChange(symbol, newName) {
+    console.log("handlePlayerNameChange")
     setPlayers(prevPlayers => {
       return {
         ...prevPlayers,
